@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Comic;
 use Illuminate\Http\Request;
+use App\Comic;
 
 class ComicController extends Controller
 {

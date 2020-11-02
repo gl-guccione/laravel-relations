@@ -17,13 +17,13 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('isbn', 13)->unique();
             $table->string('title', 50);
-            $table->string('author', 50);
-            $table->string('cover');
+            $table->string('author', 50)->nullable();
+            $table->string('cover')->nullable();
             $table->float('price', 6, 2);
-            $table->smallInteger('pages');
+            $table->smallInteger('pages')->nullable();
             $table->smallInteger('number');
-            $table->date('date_of_release');
-            $table->string('publisher', 50);
+            $table->date('date_of_release')->nullable();
+            $table->string('publisher', 50)->nullable();
             $table->timestamps();
         });
     }

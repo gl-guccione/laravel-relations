@@ -17,8 +17,13 @@ class ComicsTableSeeder extends Seeder
         $new_comic = new Comic();
         $new_comic->isbn = $faker->numberBetween(9000000000000, 9999999999999);
         $new_comic->title = $faker->text(50);
+        $new_comic->author = $faker->name();
+        $new_comic->cover = $faker->imageUrl(400, 600);
         $new_comic->price = $faker->randomFloat(2, 1, 9999);
+        $new_comic->pages = $faker->numberBetween(1, 5000);
         $new_comic->number = $faker->numberBetween(1, 500);
+        $new_comic->date_of_release = $faker->date('Y-m-d', 'now');
+        $new_comic->publisher = $faker->company();
         $new_comic->save();
       }
 

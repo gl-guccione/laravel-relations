@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comic extends Model
+class Author_info extends Model
 {
     public function author()
     {
